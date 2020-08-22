@@ -33,3 +33,41 @@ Links to kernels and blogs I used when learning to complete this analyis. Thanks
 I completed some exploratory data analysis to better understand the data. It was clear that there were a number of missing ('NaN') values in the data and that some feature engineering would be required before training the model. I also investigated the correlations between some of the key metrics and the target feature 'SalePrice'. Some highlights are below.
 
 
+![Picture]
+![Picture]
+![Picture]
+
+
+## Feature Engineering
+
+The EDA revealed that some feature engineering would be required before use the data to train the model. I undertook the following steps:
+
+- Removed features with high proportions of missing values
+
+- Removed features with mostly single values
+
+- Rpelaced null and NaN values with the following:
+            - Numerical data: mean 
+            - Ordinal data: a new value 'NA'
+            - Categorical data: mode
+
+- Ordinal mapping to assign numeric values to categorical data
+
+- Obtained dummy data
+
+## Model Building & Performance
+
+I split the data into a training (80%) and validation (20%) set using train_test_split. I created Random Forest and XGBoost models and optimised these using RandomizedSearchCV, using mean absolute error (mae) as the evaluation criteria.
+
+The XGBoost model was the best performing.
+
+- **XGBoost:** MAE = $16k
+- **RandomForest:** MAE = $18k
+
+I submitted predictions to the Kaggle.com Housing Prices Competition. The results currently sit in the top 7% of all submissions (as of 22.08.2020)
+ 
+
+
+
+
+
