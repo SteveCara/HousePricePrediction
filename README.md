@@ -12,7 +12,7 @@
 
 - Optimised models using RandomizedSearchCV
 
-- Created prediction outputs to submit to the Kaggle.com House Prices competition (currenlty in the top 7% of submissions as of 22.08.2020)
+- Created prediction outputs to submit to the Kaggle.com House Prices competition (currently in the top 7% of submissions as of 22.08.2020)
 
 ## Resources
 
